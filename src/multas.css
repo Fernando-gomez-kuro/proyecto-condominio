@@ -1,0 +1,87 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    background-image: url('https://residentia.net/mejorando-mi-condominio/wp-content/uploads/2024/05/Default_a_photographstyle_image_of_a_modern_condominium_surro_2.jpg'); /* URL de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; /* Centra todo el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+  
+  /* Contenedor principal */
+  .multas-container {
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Barra de navegación */
+  .multas-navbar {
+    background-color: #333; /* Fondo oscuro para la barra */
+    padding: 10px 0;
+    width: 100%;
+  }
+  
+  .multas-navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .multas-navbar li {
+    display: inline-block; /* Asegura que los elementos estén en línea */
+  }
+  
+  .multas-navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 14px 16px;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .multas-navbar a:hover {
+    background-color: #111; /* Fondo oscuro cuando el usuario pasa el ratón */
+  }
+  
+  .active {
+    background-color: #04AA6D; /* Color para el enlace activo */
+  }
+  
+  /* Contenido */
+  .multas-content {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para mejorar la legibilidad */
+    border-radius: 10px;
+    margin-top: 100px; /* Espacio debajo de la barra de navegación */
+    max-width: 90%; /* Asegura que el contenido no ocupe todo el ancho */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .multas-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .multas-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  

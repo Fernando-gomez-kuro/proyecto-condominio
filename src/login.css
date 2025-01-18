@@ -1,0 +1,77 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://residentia.net/mejorando-mi-condominio/wp-content/uploads/2024/05/Default_a_photographstyle_image_of_a_modern_condominium_surro_2.jpg'); /* URL de la imagen de fondo */
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Contenedor principal centrado */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Caja de login más grande, con transparencia y espacio para logo */
+.login-box {
+  background: rgba(43, 42, 42, 0.53); /* Fondo blanco semi-transparente */
+  padding: 50px; /* Caja más grande */
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 450px; /* Más ancha */
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Estilo del logo */
+.logo {
+  width: 120px; /* Ajusta el tamaño del logo */
+  margin-bottom: 20px;
+}
+
+/* Título */
+h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 26px; /* Más grande */
+}
+
+/* Estilos para los inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* Botón azul */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Azul */
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+

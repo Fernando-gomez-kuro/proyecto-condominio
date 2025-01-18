@@ -1,0 +1,81 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://imagenes.eleconomista.com.mx/files/image_1000_1000/uploads/2023/10/04/66e4806b00cf7.jpeg'); /* URL de la imagen de fondo */
+    background-color: black;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Contenedor principal centrado */
+  .registro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  /* Caja de registro similar a login */
+  .registro-box {
+    background: rgba(43, 42, 42, 0.53); /* Fondo semi-transparente */
+    padding: 50px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    width: 450px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Título */
+  h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+  
+  /* Estilos para los inputs */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  /* Botón de registrar */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Azul */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+  }
+  
+  /* Botón de salir */
+  .salir-btn {
+    background-color: #dc3545; /* Rojo */
+    margin-top: 10px;
+  }
+  
+  .salir-btn:hover {
+    background-color: #a71d2a; /* Rojo más oscuro */
+  }
+  
