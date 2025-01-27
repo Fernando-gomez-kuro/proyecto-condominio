@@ -9,6 +9,7 @@ function Admin() {
         <ul>
         <li><Link to="/registro">Registrar usuarios </Link></li>
           <li><Link to="/usuarios">Gestión de usuarios</Link></li>
+          <li><Link to="/multasadm">Multas</Link></li>
           <li><Link to="/">Cerrar sesión</Link></li>
         </ul>
       </nav>

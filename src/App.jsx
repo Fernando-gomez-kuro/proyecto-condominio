@@ -7,6 +7,8 @@ import Multas from './multas.jsx'; // Asegúrate de que el archivo Multas.jsx ex
 import Admin from './admin.jsx';
 import Registro from './registro.jsx';
 import Usuarios from './usuarios.jsx';
+import Multasadm from './multasadm.jsx';
+import Regismu from './regismu.jsx';
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
         <Route path="/admin" element={<Admin />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/multasadm" element={<Multasadm />} />
+        <Route path="/regismu" element={<Regismu />} />
       </Routes>
     </Router>
   );

@@ -1,0 +1,88 @@
+/* src/multasadm.css */
+
+/* General resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://imagenes.eleconomista.com.mx/files/image_1000_1000/uploads/2023/10/04/66e4806b00cf7.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; /* Centra todo el contenido */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Contenedor principal */
+.muladm-container {
+  height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra de navegación */
+.muladm-navbar {
+  background-color: #333;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.muladm-navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  padding: 0;
+  margin: 0;
+}
+
+.muladm-navbar li {
+  display: inline-block;
+}
+
+.muladm-navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-align: center;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.muladm-navbar a:hover {
+  background-color: #111;
+}
+
+.muladm-active {
+  background-color: #04AA6D; /* Color para el enlace activo */
+}
+
+/* Contenido */
+.muladm-content {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  border-radius: 10px;
+  margin-top: 100px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.muladm-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.muladm-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
