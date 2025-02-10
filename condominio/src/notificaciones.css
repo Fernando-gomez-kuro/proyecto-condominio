@@ -1,0 +1,84 @@
+/* Estilo general para la ventana de notificaciones */
+.notificaciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; /* Asegura que la ventana esté por encima de otros elementos */
+  }
+  
+  /* Estilo para el cuadro de la notificación */
+  .notificacion-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Título de la notificación */
+  .notificacion-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  /* Texto del contenido de la notificación */
+  .notificacion-content {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el total de las multas */
+  .total-costo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e74c3c; /* Color para llamar la atención */
+    margin-bottom: 15px;
+  }
+  
+  /* Botón de cerrar la ventana */
+  .close-btn {
+    padding: 10px 20px;
+    background-color: #3498db; /* Color de fondo azul */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .close-btn:hover {
+    background-color: #2980b9; /* Color al pasar el ratón sobre el botón */
+  }
+  
+  /* Responsividad para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .notificacion-box {
+      width: 90%;
+    }
+  
+    .notificacion-title {
+      font-size: 20px;
+    }
+  
+    .notificacion-content {
+      font-size: 16px;
+    }
+  
+    .total-costo {
+      font-size: 18px;
+    }
+  }
+  

@@ -9,6 +9,7 @@ import Registro from './registro.jsx';
 import Usuarios from './usuarios.jsx';
 import Multasadm from './multasadm.jsx';
 import Regismu from './regismu.jsx';
+import Notificacion from './notificacion.jsx';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/usuarios" element={<Usuarios />} />
         <Route path="/multasadm" element={<Multasadm />} />
         <Route path="/regismu" element={<Regismu />} />
+        <Route path="/notificacion" element={<Notificacion />} />
       </Routes>
     </Router>
   );

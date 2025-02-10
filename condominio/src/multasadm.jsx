@@ -40,7 +40,7 @@ function MultasAdmin() {
       <nav className="muladm-navbar">
         <ul>
           <li><Link to="/admin">Inicio</Link></li>
-          <li><Link to="/regismu">Registrar Multas</Link></li>
+          <li><Link to="/notificacion">Notificaciones</Link></li>
           <li><Link to="/usuarios">Gestión de Usuarios</Link></li>
           <li><Link to="/">Cerrar Sesión</Link></li>
         </ul>
@@ -65,7 +65,7 @@ function MultasAdmin() {
           </label>
 
           <label>
-            Costo:
+            Monto:
             <input type="number" name="costo" value={multa.costo} onChange={handleChange} required />
           </label>
 
