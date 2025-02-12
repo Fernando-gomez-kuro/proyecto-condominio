@@ -2,14 +2,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors'); // Para permitir solicitudes desde el frontend
+const bcrypt = require('bcrypt');
+const Usuario = require('./models/usuario'); // Importar el modelo de usuario
 
 dotenv.config();
 
 const app = express();
-app.use(cors()); // Permitir solicitudes CORS
-app.use(express.json()); // Middleware para parsear JSON
+app.use(cors()); // Habilitar CORS
+app.use(express.json()); // Middleware para manejar JSON
 
-// Conexión a MongoDB
+// Conectar a MongoDB
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Conectado a MongoDB'))
   .catch((err) => console.error('Error al conectar a MongoDB:', err));
@@ -53,9 +55,9 @@ app.post('/api/multas', async (req, res) => {
   }
 });
 
-// **Nueva ruta para calcular el total de las multas**
+// Ruta para calcular el total de las multas
 app.get('/api/multas/total', async (req, res) => {
-  console.log('Ruta /api/multas/total solicitada');  // Añadir para verificar si la ruta es llamada
+  console.log('Ruta /api/multas/total solicitada'); // Añadir para verificar si la ruta es llamada
 
   try {
     const multas = await Multa.find(); // Obtén todas las multas de la base de datos
@@ -66,8 +68,35 @@ app.get('/api/multas/total', async (req, res) => {
   }
 });
 
+// Ruta para registrar un nuevo usuario
+app.post('/register', async (req, res) => {
+  const { nombre, telefono, departamento, password, rol } = req.body;
 
+  // Validar si falta algún dato
+  if (!nombre || !telefono || !departamento || !password) {
+    return res.status(400).json({ message: 'Faltan datos' });
+  }
 
+  try {
+    // Encriptar la contraseña
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Crear un nuevo usuario
+    const newUser = new Usuario({
+      nombre,
+      telefono,
+      departamento,
+      password: hashedPassword,
+      rol,
+    });
+
+    // Guardar el usuario en la base de datos
+    await newUser.save();
+    res.status(201).json({ message: 'Usuario registrado correctamente' });
+  } catch (error) {
+    res.status(500).json({ message: 'Error al registrar el usuario', error });
+  }
+});
 
 // Iniciar el servidor
 const PORT = process.env.PORT || 3000;
